@@ -1,0 +1,29 @@
+{
+  "feature_cols": [
+    "voltage_V_std",
+    "voltage_V_slope",
+    "voltage_V_range",
+    "voltage_V_delta",
+    "voltage_V_rel_mean",
+    "voltage_V_rel_last",
+    "voltage_V_pct_change_from_ref",
+    "current_A_std",
+    "current_A_slope",
+    "current_A_range",
+    "current_A_delta",
+    "current_A_rel_mean",
+    "current_A_rel_last",
+    "current_A_pct_change_from_ref",
+    "power_W_std",
+    "power_W_slope",
+    "power_W_range",
+    "power_W_delta",
+    "power_W_rel_mean",
+    "power_W_rel_last",
+    "power_W_pct_change_from_ref",
+    "mean_power_over_voltage",
+    "mean_current_over_voltage",
+    "low_current_fraction",
+    "low_power_fraction"
+  ]
+}

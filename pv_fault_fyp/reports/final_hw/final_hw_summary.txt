@@ -1,0 +1,47 @@
+FINAL HARDWARE-ORIENTED XGBOOST PROFILE
+================================================================================
+Target split summary:
+solar_data_log: total=1448, train=863, val=280, test=285
+solar_data_log_OpenCircuit: total=1121, train=667, val=214, test=220
+solar_data_log_shading: total=1072, train=638, val=204, test=210
+solar_data_log_with_temperature: total=1448, train=863, val=280, test=285
+
+Best params:
+  enter_th: 0.45
+  exit_th: 0.25
+  k_on: 3
+  k_off: 3
+  shade_th: 0.55
+  shade_fault_prob_min: 0.55
+  shade_power_rel_max: 0.8
+  shade_current_rel_max: 0.85
+  shade_low_power_min: 0.0
+  oc_current_frac_th: 0.8
+  oc_power_frac_th: 0.8
+
+Best tuning score: 1.0848
+Best validation macro_f1 during tuning: 0.7572
+Best validation normal_recall during tuning: 1.0000
+
+Validation
+  accuracy=0.8344
+  macro_f1=0.7572
+  confusion_matrix=[[560, 0, 0], [160, 54, 0], [2, 0, 202]]
+
+Test
+  accuracy=0.8860
+  macro_f1=0.8143
+  confusion_matrix=[[570, 0, 0], [2, 108, 110], [2, 0, 208]]
+
+External
+  accuracy=0.5932
+  macro_f1=0.2482
+  confusion_matrix=[[0, 0, 0], [101, 665, 355], [0, 0, 0]]
+
+Artifacts:
+  Params JSON: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\reports\final_hw\best_hw_params.json
+  Deployment JSON: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\models\xgb\deployment_profile.json
+  Deployment header: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\models\xgb\deployment_profile.h
+  Validation predictions: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\reports\final_hw\val_predictions_hw.csv
+  Test predictions: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\reports\final_hw\test_predictions_hw.csv
+  External predictions: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\reports\final_hw\external_predictions_hw.csv

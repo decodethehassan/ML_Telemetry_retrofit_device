@@ -1,0 +1,50 @@
+EXPERIMENT: transfer_weighted
+================================================================================
+Stage 1 metrics
+Validation accuracy=0.5542, macro_f1=0.5099
+Test accuracy=0.4300, macro_f1=0.3007
+External accuracy=0.9322, macro_f1=0.4825
+
+Stage 2 metrics (fault-type only)
+Validation accuracy=0.9378, macro_f1=0.9377
+Test accuracy=0.7302, macro_f1=0.7141
+External accuracy=0.7288, macro_f1=0.4216
+
+End-to-end 3-class pipeline metrics
+Validation accuracy=0.5276, macro_f1=0.5706
+Test accuracy=0.3140, macro_f1=0.3331
+External accuracy=0.7181, macro_f1=0.2786
+
+Top Stage 1 features:
+  voltage_V_pct_change_from_ref: 0.288866
+  mean_current_over_voltage: 0.228035
+  voltage_V_rel_mean: 0.139539
+  voltage_V_rel_last: 0.074981
+  power_W_rel_mean: 0.054117
+  power_W_pct_change_from_ref: 0.053759
+  current_A_pct_change_from_ref: 0.032666
+  current_A_rel_last: 0.015639
+  current_A_rel_mean: 0.014074
+  power_W_rel_last: 0.013409
+  mean_power_over_voltage: 0.013402
+  power_W_std: 0.011875
+  voltage_V_std: 0.007664
+  power_W_delta: 0.007149
+  power_W_range: 0.006736
+
+Top Stage 2 features:
+  mean_power_over_voltage: 0.355453
+  power_W_rel_mean: 0.220237
+  current_A_std: 0.081594
+  current_A_range: 0.068919
+  low_power_fraction: 0.036998
+  power_W_rel_last: 0.034362
+  voltage_V_pct_change_from_ref: 0.028026
+  power_W_range: 0.023741
+  power_W_std: 0.022644
+  mean_current_over_voltage: 0.021898
+  power_W_pct_change_from_ref: 0.018474
+  voltage_V_rel_mean: 0.017200
+  low_current_fraction: 0.016981
+  current_A_rel_mean: 0.014342
+  current_A_rel_last: 0.011086

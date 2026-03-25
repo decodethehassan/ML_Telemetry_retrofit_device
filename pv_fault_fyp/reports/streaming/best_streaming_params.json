@@ -1,0 +1,9 @@
+{
+  "enter_th": 0.45,
+  "exit_th": 0.3,
+  "k_on": 3,
+  "k_off": 3,
+  "shade_th": 0.5,
+  "oc_current_frac_th": 0.8,
+  "oc_power_frac_th": 0.8
+}

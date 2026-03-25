@@ -1,0 +1,36 @@
+STREAMING / HYSTERESIS EVALUATION
+================================================================================
+Target split summary:
+solar_data_log: total=1448, train=863, val=280, test=285
+solar_data_log_OpenCircuit: total=1121, train=667, val=214, test=220
+solar_data_log_shading: total=1072, train=638, val=204, test=210
+solar_data_log_with_temperature: total=1448, train=863, val=280, test=285
+
+Best params:
+  enter_th: 0.45
+  exit_th: 0.3
+  k_on: 3
+  k_off: 3
+  shade_th: 0.5
+  oc_current_frac_th: 0.8
+  oc_power_frac_th: 0.8
+
+Validation
+  accuracy=0.5061
+  macro_f1=0.5443
+  confusion_matrix=[[90, 42, 428], [2, 211, 1], [2, 8, 194]]
+
+Test
+  accuracy=0.3170
+  macro_f1=0.3144
+  confusion_matrix=[[4, 82, 484], [2, 108, 110], [2, 3, 205]]
+
+External
+  accuracy=0.8368
+  macro_f1=0.3037
+  confusion_matrix=[[0, 0, 0], [19, 938, 164], [0, 0, 0]]
+
+Notes:
+- External set is the threshold100 open-circuit file.
+- For external set, accuracy and open-circuit behavior are more informative than macro F1.
+- This script evaluates streaming logic closer to deployment behavior.

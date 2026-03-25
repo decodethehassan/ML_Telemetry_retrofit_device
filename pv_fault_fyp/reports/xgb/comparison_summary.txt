@@ -1,0 +1,30 @@
+XGBOOST EXPERIMENT COMPARISON
+================================================================================
+Target split summary:
+solar_data_log: total=1448, train=863, val=280, test=285
+solar_data_log_OpenCircuit: total=1121, train=667, val=214, test=220
+solar_data_log_shading: total=1072, train=638, val=204, test=210
+solar_data_log_with_temperature: total=1448, train=863, val=280, test=285
+
+GPVS sampling summary:
+GPVS sampled for normal: 20000
+GPVS sampled for open_circuit: 20000
+GPVS sampled for shading: 20000
+
+target_only
+  pipeline_val_accuracy=0.5327
+  pipeline_val_macro_f1=0.5707
+  pipeline_test_accuracy=0.3170
+  pipeline_test_macro_f1=0.3127
+  pipeline_external_accuracy=0.8216
+  pipeline_external_macro_f1=0.3007
+
+transfer_weighted
+  pipeline_val_accuracy=0.5276
+  pipeline_val_macro_f1=0.5706
+  pipeline_test_accuracy=0.3140
+  pipeline_test_macro_f1=0.3331
+  pipeline_external_accuracy=0.7181
+  pipeline_external_macro_f1=0.2786
+
+Best model by validation macro F1: target_only

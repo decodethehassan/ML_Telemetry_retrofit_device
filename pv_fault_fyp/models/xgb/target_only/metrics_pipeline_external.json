@@ -1,0 +1,54 @@
+{
+  "accuracy": 0.8215878679750223,
+  "macro_f1": 0.3006856023506366,
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      43,
+      921,
+      157
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "classification_report": {
+    "normal": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "open_circuit": {
+      "precision": 1.0,
+      "recall": 0.8215878679750223,
+      "f1-score": 0.9020568070519099,
+      "support": 1121.0
+    },
+    "shading": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "accuracy": 0.8215878679750223,
+    "macro avg": {
+      "precision": 0.3333333333333333,
+      "recall": 0.27386262265834077,
+      "f1-score": 0.3006856023506366,
+      "support": 1121.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 0.8215878679750223,
+      "f1-score": 0.9020568070519099,
+      "support": 1121.0
+    }
+  }
+}

@@ -1,0 +1,166 @@
+UNIFIED DATASET BUILD REPORT
+================================================================================
+Project root: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp
+Single-phase folder: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\data\raw\single_phase
+GPVS folder: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\data\raw\gpvs
+
+PROCESSING SINGLE-PHASE FILES
+--------------------------------------------------------------------------------
+
+[SINGLE_PHASE] solar_data_log.csv
+Original columns: ['Timestamp', 'Voltage (V)', 'Current (mA)', 'Power (W)']
+Chosen columns -> timestamp=Timestamp, voltage=Voltage (V), current=Current (mA), power=Power (W), temp=None
+Current treated as mA and converted to A
+Power kept as W (median |P_reported - V*I| = 0.427464)
+Rows before cleaning: 1452
+Rows after dropping NaNs in V/I/P: 1452
+Class label: normal
+Ranges -> V:[13.6600, 19.6300], I:[0.199100, 0.604800], P:[2.760000, 12.250000]
+
+[SINGLE_PHASE] solar_data_log_OpenCircuit.csv
+Original columns: ['Timestamp', 'Voltage (V)', 'Current (mA)', 'Power (mW)']
+Chosen columns -> timestamp=Timestamp, voltage=Voltage (V), current=Current (mA), power=Power (mW), temp=None
+Current treated as mA and converted to A
+Power kept as W (median |P_reported - V*I| = 0.010164)
+Rows before cleaning: 1125
+Rows after dropping NaNs in V/I/P: 1125
+Class label: open_circuit
+Ranges -> V:[12.4600, 18.7000], I:[0.000200, 0.556700], P:[0.000000, 9.750000]
+
+[SINGLE_PHASE] solar_data_log_OpenCircuit_threshold100.csv
+Original columns: ['Timestamp', 'Voltage (V)', 'Current (mA)', 'Power (W)', 'Label']
+Chosen columns -> timestamp=Timestamp, voltage=Voltage (V), current=Current (mA), power=Power (W), temp=None
+Current treated as mA and converted to A
+Power kept as W (median |P_reported - V*I| = 0.010164)
+Rows before cleaning: 1125
+Rows after dropping NaNs in V/I/P: 1125
+Class label: open_circuit
+Ranges -> V:[12.4600, 18.7000], I:[0.000200, 0.556700], P:[0.000000, 9.750000]
+
+[SINGLE_PHASE] solar_data_log_shading.csv
+Original columns: ['Timestamp', 'Voltage (V)', 'Current (mA)', 'Power (mW)']
+Chosen columns -> timestamp=Timestamp, voltage=Voltage (V), current=Current (mA), power=Power (mW), temp=None
+Current treated as mA and converted to A
+Power kept as W (median |P_reported - V*I| = 0.349536)
+Rows before cleaning: 1076
+Rows after dropping NaNs in V/I/P: 1076
+Class label: shading
+Ranges -> V:[8.1600, 18.8100], I:[0.181300, 0.565700], P:[1.650000, 10.440000]
+
+[SINGLE_PHASE] solar_data_log_with_temperature.csv
+Original columns: ['Timestamp', 'Voltage (V)', 'Current (mA)', 'Power (W)', 'Temperature (°C)']
+Chosen columns -> timestamp=Timestamp, voltage=Voltage (V), current=Current (mA), power=Power (W), temp=Temperature (°C)
+Current treated as mA and converted to A
+Power kept as W (median |P_reported - V*I| = 0.427464)
+Rows before cleaning: 1452
+Rows after dropping NaNs in V/I/P: 1452
+Class label: normal
+Ranges -> V:[13.6600, 19.6300], I:[0.199100, 0.604800], P:[2.760000, 12.250000]
+
+PROCESSING GPVS FILES
+--------------------------------------------------------------------------------
+
+[GPVS] F0L.csv
+Original columns: ['Time', 'Ipv', 'Vpv', 'Vdc', 'ia', 'ib', 'ic', 'va', 'vb', 'vc', 'Iabc', 'If', 'Vabc', 'Vf']
+Scenario=0, mode=L, class=normal
+Detected time column: Time
+Detected DC pairs: [('S1', 'Vpv', 'Ipv')]
+GPVS block -> file=F0L, mode=L, subsystem=S1, V_col=Vpv, I_col=Ipv, rows_before_segment=143715, rows_before_clean=143715, rows_after_clean=143715
+
+[GPVS] F0M.csv
+Original columns: ['Time', 'Ipv', 'Vpv', 'Vdc', 'ia', 'ib', 'ic', 'va', 'vb', 'vc', 'Iabc', 'If', 'Vabc', 'Vf']
+Scenario=0, mode=M, class=normal
+Detected time column: Time
+Detected DC pairs: [('S1', 'Vpv', 'Ipv')]
+GPVS block -> file=F0M, mode=M, subsystem=S1, V_col=Vpv, I_col=Ipv, rows_before_segment=141014, rows_before_clean=141014, rows_after_clean=141014
+
+[GPVS] F1L.csv -> skipped (not in common fault set)
+
+[GPVS] F1M.csv -> skipped (not in common fault set)
+
+[GPVS] F2L.csv -> skipped (not in common fault set)
+
+[GPVS] F2M.csv -> skipped (not in common fault set)
+
+[GPVS] F3L.csv -> skipped (not in common fault set)
+
+[GPVS] F3M.csv -> skipped (not in common fault set)
+
+[GPVS] F4L.csv -> skipped (not in common fault set)
+
+[GPVS] F4M.csv -> skipped (not in common fault set)
+
+[GPVS] F5L.csv
+Original columns: ['Time', 'Ipv', 'Vpv', 'Vdc', 'ia', 'ib', 'ic', 'va', 'vb', 'vc', 'Iabc', 'If', 'Vabc', 'Vf']
+Scenario=5, mode=L, class=shading
+Detected time column: Time
+Detected DC pairs: [('S1', 'Vpv', 'Ipv')]
+GPVS fault segmentation for F5L/S1: kept rows from index 78658 to end (last 45%), dropped first 55%
+GPVS block -> file=F5L, mode=L, subsystem=S1, V_col=Vpv, I_col=Ipv, rows_before_segment=143015, rows_before_clean=64357, rows_after_clean=64357
+
+[GPVS] F5M.csv
+Original columns: ['Time', 'Ipv', 'Vpv', 'Vdc', 'ia', 'ib', 'ic', 'va', 'vb', 'vc', 'Iabc', 'If', 'Vabc', 'Vf']
+Scenario=5, mode=M, class=shading
+Detected time column: Time
+Detected DC pairs: [('S1', 'Vpv', 'Ipv')]
+GPVS fault segmentation for F5M/S1: kept rows from index 79207 to end (last 45%), dropped first 55%
+GPVS block -> file=F5M, mode=M, subsystem=S1, V_col=Vpv, I_col=Ipv, rows_before_segment=144014, rows_before_clean=64807, rows_after_clean=64807
+
+[GPVS] F6L.csv -> skipped (not in common fault set)
+
+[GPVS] F6M.csv -> skipped (not in common fault set)
+
+[GPVS] F7L.csv
+Original columns: ['Time', 'Ipv', 'Vpv', 'Vdc', 'ia', 'ib', 'ic', 'va', 'vb', 'vc', 'Iabc', 'If', 'Vabc', 'Vf']
+Scenario=7, mode=L, class=open_circuit
+Detected time column: Time
+Detected DC pairs: [('S1', 'Vpv', 'Ipv')]
+GPVS fault segmentation for F7L/S1: kept rows from index 79208 to end (last 45%), dropped first 55%
+GPVS block -> file=F7L, mode=L, subsystem=S1, V_col=Vpv, I_col=Ipv, rows_before_segment=144015, rows_before_clean=64807, rows_after_clean=64807
+
+[GPVS] F7M.csv
+Original columns: ['Time', 'Ipv', 'Vpv', 'Vdc', 'ia', 'ib', 'ic', 'va', 'vb', 'vc', 'Iabc', 'If', 'Vabc', 'Vf']
+Scenario=7, mode=M, class=open_circuit
+Detected time column: Time
+Detected DC pairs: [('S1', 'Vpv', 'Ipv')]
+GPVS fault segmentation for F7M/S1: kept rows from index 79208 to end (last 45%), dropped first 55%
+GPVS block -> file=F7M, mode=M, subsystem=S1, V_col=Vpv, I_col=Ipv, rows_before_segment=144015, rows_before_clean=64807, rows_after_clean=64807
+
+
+================================================================================
+FINAL SUMMARY
+================================================================================
+Master table saved to: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\data\processed\master_table.csv
+Total rows: 549737
+
+Class counts:
+  normal: 287633
+  open_circuit: 131864
+  shading: 130240
+
+Counts by source_domain and class_label:
+  ('gpvs', 'normal'): 284729
+  ('gpvs', 'open_circuit'): 129614
+  ('gpvs', 'shading'): 129164
+  ('single_phase', 'normal'): 2904
+  ('single_phase', 'open_circuit'): 2250
+  ('single_phase', 'shading'): 1076
+
+Missing values:
+  timestamp: 0
+  sample_index: 0
+  voltage_V: 0
+  current_A: 0
+  power_W: 0
+  temperature_C: 548285
+  class_label: 0
+  source_domain: 0
+  source_file: 0
+  mode: 0
+  subsystem: 0
+
+Numeric ranges:
+  voltage_V: min=-1.019287109375, max=111.474609375
+  current_A: min=-0.58465576171875, max=3.3035888671875
+  power_W: min=-34.17952209711075, max=289.04601037502334
+  temperature_C: min=30.0, max=69.0

@@ -1,0 +1,13 @@
+{
+  "enter_th": 0.45,
+  "exit_th": 0.25,
+  "k_on": 3,
+  "k_off": 3,
+  "shade_th": 0.55,
+  "shade_fault_prob_min": 0.55,
+  "shade_power_rel_max": 0.8,
+  "shade_current_rel_max": 0.85,
+  "shade_low_power_min": 0.0,
+  "oc_current_frac_th": 0.8,
+  "oc_power_frac_th": 0.8
+}

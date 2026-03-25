@@ -1,0 +1,162 @@
+WINDOW GENERATION REPORT
+================================================================================
+Input master table: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\data\processed\master_table.csv
+Output windows table: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\data\processed\windows_table.csv
+Output healthy references: D:\FYP\Final_defence\25_03_2026_unifyingdatasets\pv_fault_fyp\data\processed\healthy_references.csv
+Window size: 5
+Step size: 1
+
+Healthy reference values:
+source_domain=gpvs, mode=L, subsystem=S1 | V_ref=101.190186, I_ref=1.498535, P_ref=151.564319
+source_domain=gpvs, mode=M, subsystem=S1 | V_ref=90.490723, I_ref=2.247803, P_ref=203.517123
+source_domain=single_phase, mode=nan, subsystem=nan | V_ref=14.400000, I_ref=0.413950, P_ref=5.900000
+
+Group summaries:
+group=('gpvs', 'F0L', 'L', 'S1', 'normal'), raw_rows=143715, windows_created=143711
+group=('gpvs', 'F0M', 'M', 'S1', 'normal'), raw_rows=141014, windows_created=141010
+group=('gpvs', 'F5L', 'L', 'S1', 'shading'), raw_rows=64357, windows_created=64353
+group=('gpvs', 'F5M', 'M', 'S1', 'shading'), raw_rows=64807, windows_created=64803
+group=('gpvs', 'F7L', 'L', 'S1', 'open_circuit'), raw_rows=64807, windows_created=64803
+group=('gpvs', 'F7M', 'M', 'S1', 'open_circuit'), raw_rows=64807, windows_created=64803
+group=('single_phase', 'solar_data_log', nan, nan, 'normal'), raw_rows=1452, windows_created=1448
+group=('single_phase', 'solar_data_log_OpenCircuit', nan, nan, 'open_circuit'), raw_rows=1125, windows_created=1121
+group=('single_phase', 'solar_data_log_OpenCircuit_threshold100', nan, nan, 'open_circuit'), raw_rows=1125, windows_created=1121
+group=('single_phase', 'solar_data_log_shading', nan, nan, 'shading'), raw_rows=1076, windows_created=1072
+group=('single_phase', 'solar_data_log_with_temperature', nan, nan, 'normal'), raw_rows=1452, windows_created=1448
+
+Final windows summary:
+Total windows: 549693
+Class counts:
+  normal: 287617
+  open_circuit: 131848
+  shading: 130228
+
+Counts by source_domain and class_label:
+  ('gpvs', 'normal'): 284721
+  ('gpvs', 'open_circuit'): 129606
+  ('gpvs', 'shading'): 129156
+  ('single_phase', 'normal'): 2896
+  ('single_phase', 'open_circuit'): 2242
+  ('single_phase', 'shading'): 1072
+
+Columns:
+  source_domain
+  source_file
+  mode
+  subsystem
+  class_label
+  fault_binary
+  window_size
+  window_start_index
+  window_end_index
+  window_center_index
+  timestamp_start
+  timestamp_end
+  ref_voltage_V
+  ref_current_A
+  ref_power_W
+  voltage_V_mean
+  voltage_V_std
+  voltage_V_min
+  voltage_V_max
+  voltage_V_first
+  voltage_V_last
+  voltage_V_slope
+  voltage_V_range
+  voltage_V_delta
+  voltage_V_rel_mean
+  voltage_V_rel_last
+  voltage_V_pct_change_from_ref
+  current_A_mean
+  current_A_std
+  current_A_min
+  current_A_max
+  current_A_first
+  current_A_last
+  current_A_slope
+  current_A_range
+  current_A_delta
+  current_A_rel_mean
+  current_A_rel_last
+  current_A_pct_change_from_ref
+  power_W_mean
+  power_W_std
+  power_W_min
+  power_W_max
+  power_W_first
+  power_W_last
+  power_W_slope
+  power_W_range
+  power_W_delta
+  power_W_rel_mean
+  power_W_rel_last
+  power_W_pct_change_from_ref
+  mean_power_over_voltage
+  mean_power_over_current
+  mean_current_over_voltage
+  neg_voltage_count
+  neg_current_count
+  neg_power_count
+  low_current_fraction
+  low_power_fraction
+
+Missing values:
+  source_domain: 0
+  source_file: 0
+  mode: 6210
+  subsystem: 6210
+  class_label: 0
+  fault_binary: 0
+  window_size: 0
+  window_start_index: 0
+  window_end_index: 0
+  window_center_index: 0
+  timestamp_start: 0
+  timestamp_end: 0
+  ref_voltage_V: 0
+  ref_current_A: 0
+  ref_power_W: 0
+  voltage_V_mean: 0
+  voltage_V_std: 0
+  voltage_V_min: 0
+  voltage_V_max: 0
+  voltage_V_first: 0
+  voltage_V_last: 0
+  voltage_V_slope: 0
+  voltage_V_range: 0
+  voltage_V_delta: 0
+  voltage_V_rel_mean: 0
+  voltage_V_rel_last: 0
+  voltage_V_pct_change_from_ref: 0
+  current_A_mean: 0
+  current_A_std: 0
+  current_A_min: 0
+  current_A_max: 0
+  current_A_first: 0
+  current_A_last: 0
+  current_A_slope: 0
+  current_A_range: 0
+  current_A_delta: 0
+  current_A_rel_mean: 0
+  current_A_rel_last: 0
+  current_A_pct_change_from_ref: 0
+  power_W_mean: 0
+  power_W_std: 0
+  power_W_min: 0
+  power_W_max: 0
+  power_W_first: 0
+  power_W_last: 0
+  power_W_slope: 0
+  power_W_range: 0
+  power_W_delta: 0
+  power_W_rel_mean: 0
+  power_W_rel_last: 0
+  power_W_pct_change_from_ref: 0
+  mean_power_over_voltage: 0
+  mean_power_over_current: 3
+  mean_current_over_voltage: 0
+  neg_voltage_count: 0
+  neg_current_count: 0
+  neg_power_count: 0
+  low_current_fraction: 0
+  low_power_fraction: 0

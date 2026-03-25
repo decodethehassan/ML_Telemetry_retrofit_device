@@ -1,0 +1,4 @@
+.venv/
+pv_fault_fyp/.venv/
+__pycache__/
+*.pyc
